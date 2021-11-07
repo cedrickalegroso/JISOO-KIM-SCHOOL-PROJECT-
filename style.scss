@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'ProductSans-Black';
+    src:url('ProductSans-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ProductSans-Medium';
+    src:url('ProductSans-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html,
+body {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+}
+
+.mainbodywapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("jiss.png");
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 1fr;
+  grid-template-areas: "navbarwrapper" "contentwarpper";
+
+  .bottomFade {
+    
+    z-index: 11;
+    bottom: 0;
+    position: fixed;
+    display: block;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 90%
+    );
+    height: 10vh;
+    width: 100vw;
+
+    p{
+      margin-top: 50px;
+      color: white;
+      text-align: center;
+      font-family: ProductSans-Medium, sans-serif;
+      font-weight: 600;
+      font-style: normal;
+
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .bgfilter {
+    position: fixed;
+    display: block;
+    background-color: black;
+    filter: opacity(0.5);
+
+    z-index: 0;
+
+    img {
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+
+  .navbarwrapper {
+    z-index: 20;
+    //background-color: green;
+    grid-area: navbarwrapper;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-areas: ". navinnersec1 navinnersec2 .";
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    .navinnersec1 {
+      grid-area: navinnersec1;
+      text-align: left;
+      color: white;
+      display: inline-block;
+      display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "logo links";
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+      .logo{
+        grid-area: logo;
+
+        h1{
+            font-family: ProductSans-Black, sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+    
+      }
+
+      .links{
+          
+        grid-area: links;
+        display: inline-block;
+
+        ul{
+            li{
+                margin-right: 20px;
+                list-style-type: none;
+                display: inline-block;
+                font-family: ProductSans-Medium, sans-serif;
+                font-weight: 800;
+                font-style: normal;
+
+
+                a{
+                  color: white;
+                  text-decoration: none;
+                }
+                
+            }
+        }
+      }
+    }
+
+    .navinnersec2 {
+      grid-area: navinnersec2;
+      text-align: right;
+
+      ul {
+        li {
+          list-style-type: none;
+          display: inline-block;
+          svg {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+
+  .contentwarpper {
+    z-index: 10;
+    color: white;
+    grid-area: contentwarpper;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-areas: ". contentinner1 contentinner2 .";
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+
+    .contentinner1 {
+      opacity: 0;
+      grid-area: contentinner1;
+
+      .jisooHome {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .jisooContact {
+        margin-top: 35%;
+        width: 100%;
+      }
+
+
+      .jisooAbout {
+        margin-top: 35%;
+        width: 100%;
+      }
+    }
+
+    .contentinner2 {
+      grid-area: contentinner2;
+
+      .texts{
+        margin-top: -100px;
+        margin-left: -50px;
+        line-height: 1px;
+
+        .nameKR {
+            font-size: 16rem;
+            font-family: noto-sans, sans-serif;
+            font-weight: 800;
+            font-style: normal;
+          }
+    
+          .nameENG {
+            font-size: 5rem;
+            font-family: ProductSans-Black, sans-serif;
+            font-weight: 800;
+            font-style: normal;
+          }
+      }
+
+
+      .texts-About{
+        margin-right: 20%;
+       
+        line-height: 1px;
+
+        .nameKR {
+            font-size: 5rem;
+            font-family: noto-sans, sans-serif;
+            font-weight: 800;
+            font-style: normal;
+          }
+    
+          .nameENG {
+            font-size: 1.5rem;
+            font-family: ProductSans-Black, sans-serif;
+            font-weight: 800;
+            font-style: normal;
+          }
+      }
+
+      .text-desc{
+        margin-right: 20%;
+
+        p{
+          text-align: left;
+          text-indent: 3.5rem;
+          font-size: 1.1rem;
+          line-height: 1.6rem;
+          font-family: ProductSans-Medium, sans-serif;
+          font-weight: 600;
+          font-style: normal;
+        }
+       
+        
+      }
+
+
+      form{
+        input{
+          color: white;
+          margin-top: 10%;
+          font-family: ProductSans-Medium, sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          background-color: rgba(0, 0, 0, 0);
+          border: 1px solid white;
+          padding: 5%;
+          width: 350px;
+          
+        }
+
+        textarea{
+          color: white;
+          margin-top: 10%;
+          font-family: ProductSans-Medium, sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          background-color: rgba(0, 0, 0, 0);
+          border: 1px solid white;
+          padding: 5%;
+          width: 350px;
+        }
+
+        button{
+          color: white;
+          margin-top: 10%;
+          font-family: ProductSans-Medium, sans-serif;
+          font-weight: 600;
+          font-style: normal;
+          background-color: rgba(0, 0, 0, 0);
+          border: 1px solid white;
+          padding: 5%;
+          width: 390px;
+        }
+      }
+    
+    }
+  }
+}
