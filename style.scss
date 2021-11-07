@@ -214,6 +214,20 @@ body {
 
 
       .texts-About{
+
+        ul{
+          margin-left: -6%;
+          li{
+            list-style: none;
+            display: inline-block;
+            font-family: ProductSans-Medium, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+          }
+        }
+
+
+
         margin-right: 20%;
        
         line-height: 1px;
@@ -244,6 +258,29 @@ body {
           font-family: ProductSans-Medium, sans-serif;
           font-weight: 600;
           font-style: normal;
+        }
+
+       
+
+        table{
+
+          width: 100%;
+
+          font-family: ProductSans-Medium, sans-serif;
+          font-weight: 600;
+          font-style: normal;
+
+          border: 1px solid white;
+
+          td{
+            border: 1px solid white;
+          }
+
+          th{
+            border: 1px solid white;
+          }
+
+        
         }
        
         

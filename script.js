@@ -1,4 +1,4 @@
-//alert("Not made to be responsive.")\
+//alert("Not made to be responsive.")
 
 
 
