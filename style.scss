@@ -1,3 +1,5 @@
+/* Custom Fonts */
+
 @font-face {
     font-family: 'ProductSans-Black';
     src:url('ProductSans-Black.ttf') format('truetype');
@@ -14,7 +16,7 @@
 }
 
 
-
+/* Reset */
 html,
 body {
   overflow: hidden;
@@ -23,18 +25,26 @@ body {
   background-color: black;
 }
 
+
+/* 
+Wraps the entire site | Parent 
+Used grid to make it easier to lay out 
+the contents 
+*/
 .mainbodywapper {
   height: 100vh;
   width: 100vw;
   background-image: url("jiss.png");
   background-size: cover;
   display: grid;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 10% 90%; 
   grid-template-columns: 1fr;
-  grid-template-areas: "navbarwrapper" "contentwarpper";
+  grid-template-areas: "navbarwrapper" "contentwarpper"; 
 
+  /* 
+  The bottom fade effect
+  */
   .bottomFade {
-    
     z-index: 11;
     bottom: 0;
     position: fixed;
@@ -62,6 +72,10 @@ body {
     }
   }
 
+  /* 
+  The filter on top of the background imgs
+  I made use of z-index and transparency to combine them
+  */
   .bgfilter {
     position: fixed;
     display: block;
@@ -76,6 +90,9 @@ body {
     }
   }
 
+  /* 
+  Design for the navbar
+  */
   .navbarwrapper {
     z-index: 20;
     //background-color: green;
@@ -155,6 +172,9 @@ body {
     }
   }
 
+  /* 
+  Design for the content sections used Grid again here split into two parts 
+  */
   .contentwarpper {
     z-index: 10;
     color: white;
