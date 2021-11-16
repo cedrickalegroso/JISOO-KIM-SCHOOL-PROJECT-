@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <!-- CSS STYLING  | RESET CSS | FORCE FULL SCREEN | BACKGROUND YELLOW -->
+  <style>
+    html {
+      color: white;
+      background-color: #feb600;
+      margin: 0px;
+      padding: 0px;
+      height: 100vh;
+      width: 100vw;
+      text-align: center;
+      font-size: 5rem;
+    }
+  </style>
+
+  <body>
+    <p>Modify a JavaScript object using the bracket notation:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      /* Varaibles needed for this to work | Initialized Object | */
+      var myObj;
+
+      /* Prompts for user name */
+      var userName = prompt("Please enter your name", "");
+
+      /* Prompts for user age */
+      var userAge = prompt("Please enter your age", "");
+
+      /* Sets the values to the object and change the elements on the HTML using the innerHTML */
+      myObj = { name: userName, age: userAge, city: "New York" };
+      document.getElementById("demo").innerHTML =
+        "Greetings! " + myObj.name + ", " + userAge;
+    </script>
+  </body>
+</html>
